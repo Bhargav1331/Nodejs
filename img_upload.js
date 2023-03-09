@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static('public'))
+
+
+
 app.post('/upload', upload.single('myImage'), (req, res) => {
   // req.file contains information about the uploaded file
   // move the file to the destination folder using fs.rename()
